@@ -21,7 +21,7 @@ btn.addEventListener('mouseover', () => {
 
 function showCustomAlert() {
     const title = "Max Says";
-    const message = "'I love you! I can\'t wait until May 5th. Happy Valentine\'s Day! ❤️'";
+    const message = "'I love you! I can\'t wait until May 2nd. Happy Valentine\'s Day! ❤️'";
     
     document.getElementById("alertTitle").innerText = title;
     document.getElementById("alertMessage").innerText = message;
