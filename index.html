@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maya Valentines</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <div class="main-container google-sans-font">
+            <h1 style="font-size: xx-large">Hey Maya</h1>
+            <div class="image-scroller">
+                <div class="scroll-content">
+                    <img src="images/maya-max1.jpeg" alt="maya and max at bar in love and stuff" class="circle-img">
+                    <img src="images/maya-max2.jpeg" alt="maya and max at bar in love and stuff" class="circle-img">
+                    <img src="images/maya-max3.jpeg" alt="maya and max at bar in love and stuff" class="circle-img">
+                    <img src="images/maya-max4.jpeg" alt="maya and max at bar in love and stuff" class="circle-img">
+                    <img src="images/maya-max5.jpeg" alt="maya and max at bar in love and stuff" class="circle-img">
+                    <img src="images/maya-max6.jpeg" alt="maya and max at bar in love and stuff" class="circle-img">
+                    <img src="images/maya-max1.jpeg" alt="maya and max at bar in love and stuff" class="circle-img">
+                    <img src="images/maya-max2.jpeg" alt="maya and max at bar in love and stuff" class="circle-img">
+                </div>
+            </div>
+            <h2 style="font-size:x-large">Will You Be My Valentine?</h1>
+            <div class="button-container">
+                <button class="btn-yes" onclick="showCustomAlert()">
+                    <svg
+                      class="empty"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="32"
+                      height="32"
+                    >
+                      <path fill="none" d="M0 0H24V24H0z"></path>
+                      <path
+                        d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2zm-3.566 15.604c.881-.556 1.676-1.109 2.42-1.701C18.335 14.533 20 11.943 20 9c0-2.36-1.537-4-3.5-4-1.076 0-2.24.57-3.086 1.414L12 7.828l-1.414-1.414C9.74 5.57 8.576 5 7.5 5 5.56 5 4 6.656 4 9c0 2.944 1.666 5.533 4.645 7.903.745.592 1.54 1.145 2.421 1.7.299.189.595.37.934.572.339-.202.635-.383.934-.571z"
+                      ></path>
+                    </svg>
+                    <svg
+                      class="filled"
+                      height="32"
+                      width="32"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M0 0H24V24H0z" fill="none"></path>
+                      <path
+                        d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z"
+                      ></path>
+                    </svg>
+                    Yes
+                  </button>
+                  <div id="game-container" style="position: relative; width: 400px; height: 300px; overflow: hidden;">
+                    <button id="runaway-btn" class="btn-yes" style="position: absolute; transition: 0.1s;" onclick="alert('too bad')">
+                        <svg class="empty" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ff0000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 0 1 7.993 6.01" />
+                            <path d="M16 16l4 4" />
+                            <path d="M20 16l-4 4" />
+                        </svg>
+                        <svg class="filled" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ff0000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 0 1 7.993 6.01" />
+                            <path d="M16 16l4 4" />
+                            <path d="M20 16l-4 4" />
+                        </svg>
+                    No
+                </button>
+                </div>
+            </div>
+            <div id="customAlert" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn" onclick="closeCustomAlert()">&times;</span>
+                    <h2 id="alertTitle">Max Says</h2>
+                    <p id="alertMessage">I love you! I can't wait until May 5th. Happy Valentine's Day! ❤️</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

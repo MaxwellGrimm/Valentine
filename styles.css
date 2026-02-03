@@ -1,0 +1,195 @@
+body{
+    background-color: #fff0f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-top: 100px;
+    gap: 20px;
+  }
+
+
+.google-sans-font {
+    font-family: "Google Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "GRAD" 0;
+  }
+
+  /* From Uiverse.io by LilaRest */ 
+.btn-yes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 25px 20px 22px;
+    box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-color: #e8e8e8;
+    border-color: #ffe2e2;
+    border-style: solid;
+    border-width: 9px;
+    border-radius: 35px;
+    font-size: 25px;
+    cursor: pointer;
+    font-weight: 900;
+    color: rgb(134, 124, 124);
+    font-family: monospace;
+    transition:
+      transform 400ms cubic-bezier(0.68, -0.55, 0.27, 2.5),
+      border-color 400ms ease-in-out,
+      background-color 400ms ease-in-out;
+    word-spacing: -2px;
+  }
+  
+  @keyframes movingBorders {
+    0% {
+      border-color: #fce4e4;
+    }
+  
+    50% {
+      border-color: #ffd8d8;
+    }
+  
+    90% {
+      border-color: #fce4e4;
+    }
+  }
+  
+  .btn-yes:hover {
+    background-color: #eee;
+    transform: scale(105%);
+    animation: movingBorders 3s infinite;
+  }
+  
+  .btn-yes svg {
+    margin-right: 11px;
+    fill: rgb(255, 110, 110);
+    transition: opacity 100ms ease-in-out;
+  }
+  
+  .filled {
+    position: absolute;
+    opacity: 0;
+    top: 20px;
+    left: 22px;
+  }
+  
+  @keyframes beatingHeart {
+    0% {
+      transform: scale(1);
+    }
+  
+    15% {
+      transform: scale(1.15);
+    }
+  
+    30% {
+      transform: scale(1);
+    }
+  
+    45% {
+      transform: scale(1.15);
+    }
+  
+    60% {
+      transform: scale(1);
+    }
+  }
+  
+  .btn-yes:hover .empty {
+    opacity: 0;
+  }
+  
+  .btn-yes:hover .filled {
+    opacity: 1;
+    animation: beatingHeart 1.2s infinite;
+  }
+  
+  #runaway-btn {
+    position: absolute;
+    transition: all 0.2s ease; /* Smooth motion */
+}
+
+.button-container {
+    position: relative;
+    display: flex;
+    /* Optional properties for alignment and spacing */
+    justify-content: space-around; /* Distributes space along the main axis (the row) */
+    align-items: flex-start;           /* Aligns items along the cross axis (vertically, by default) */
+    gap: 10px; 
+    width: 700px; /* Adjust as needed */
+    height: 500px; /* Adjust as needed */
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.circle-img {
+    flex: 0 0 auto;
+    width: 150px;      /* Set equal width and height */
+    height: 150px;     /* to create a perfect square */
+    border-radius: 50%; /* This rounds the corners into a circle */
+    object-fit: cover;  /* Ensures the image covers the area without stretching */
+    display: inline-block;
+  }
+
+.image-scroller {
+    display: flex;          /* Arranges children in a row */
+  overflow-x: auto;       /* Enables horizontal scrolling when content overflows */
+  overflow-y: hidden; 
+  width: 700px;    /* Hides vertical scrollbar */
+  white-space: nowrap;    /* Prevents items from wrapping to the next line */
+  /* Optional: Hide scrollbar visually */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none; 
+  border-radius: 3%;
+  background-color: #fff0f5; /* The color the content will fade into */
+    /* Apply mask image for the fading effect */
+    mask-image: linear-gradient(to left, transparent 0%, black 10%, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to left, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+  
+  .image-scroller::-webkit-scrollbar {
+    display: none;             /* Chrome, Safari, Opera */
+  }
+  
+  .scroll-content {
+    /* Start the animation defined below */
+    animation: vertical-marquee 10s linear infinite;
+  }
+  
+  @keyframes vertical-marquee {
+    0% {
+      transform: translateX(0); /* Start position */
+    }
+    100% {
+      transform: translateX(-50%); /* Move up by 50% of the content's total height */
+    }
+  }
